@@ -22,8 +22,9 @@ header {
 }
 
 .header-boxes {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
   color: #414042;
+  font-weight: 550;
   flex-direction: row-reverse;
   direction: rtl;
   display: flex;
@@ -31,7 +32,8 @@ header {
 }
 
 .header1-boxes {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-weight: 600;
   color: #ffffff;
   background-color: #007ac0;
   border-style: solid;

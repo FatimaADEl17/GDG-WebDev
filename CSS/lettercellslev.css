@@ -22,6 +22,7 @@ header {
   text-align: center;
   margin: 35px;
   font-weight: 400;
+  font-size: 28px;
   font-family: 'Noto Sans Arabic', sans-serif;
 }
 
@@ -41,7 +42,7 @@ header {
   margin: auto;
   margin-right: 20px;
   width: 200px;
-  height: 300px;
+  height: 280px;
   border-style: solid;
   border-radius: 5px;
   border-color:   #2CB35D;
@@ -56,7 +57,7 @@ header {
   margin-top: 40px;
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color: #2CB35D;
 }
@@ -64,17 +65,18 @@ header {
 .QM-text2{
   text-align: center;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 5px;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color: #2CB35D;
 }
 
 .QM-img {
-  width: 120px;
+  width: 100px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .QM:hover {
@@ -94,7 +96,7 @@ header {
   margin-left: 20px;
   margin-right: 20px;
   width: 200px;
-  height: 300px;
+  height: 280px;
   border-style: solid;
   border-radius: 5px;
   border-color:    #007AC0;
@@ -109,7 +111,7 @@ header {
   margin-top: 40px;
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color:  #007AC0;
 }
@@ -120,14 +122,15 @@ header {
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color:  #007AC0;
 }
 
 .standard-img {
-  width: 120px;
+  width: 100px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .standard:hover {
@@ -149,7 +152,7 @@ header {
    margin-left: 20px;
   margin-right: 20px;
   width: 200px;
-  height: 300px;
+  height: 280px;
   border-style: solid;
   border-radius: 5px;
   border-color:    #FFC10E;
@@ -164,7 +167,7 @@ header {
   margin-top: 40px;
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color:  #FFC10E;
 }
@@ -175,14 +178,15 @@ header {
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color:  #FFC10E;
 }
 
 .advanced-img {
-  width: 120px;
+  width: 100px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .advanced:hover {
@@ -201,7 +205,7 @@ header {
   margin: auto;
   margin-left: 20px;
   width: 200px;
-  height: 300px;
+  height: 280px;
   border-style: solid;
   border-radius: 5px;
   border-color:     #EE4032;
@@ -216,7 +220,7 @@ header {
   margin-top: 40px;
   margin-bottom: 5px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color:    #EE4032;
 }
@@ -227,14 +231,15 @@ header {
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Noto Sans Arabic', sans-serif;
   color:   #EE4032;
 }
 
 .expert-img {
-  width: 120px;
+  width: 100px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .expert:hover {
@@ -247,13 +252,13 @@ header {
 .description1, .description2, .description3, .description4 {
     position: absolute !important;
     left: 50%;
-    bottom: -5px;
+    bottom: -3px;
     transform: translateX(-50%);  
     width: max-content;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease; 
-    color: #333;
+    color: #454545;
     font-size: 18px;
     font-family: 'Noto Sans Arabic', sans-serif;
     z-index: 9999;
@@ -276,8 +281,10 @@ header {
   height: 40px;
   margin: auto;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 15px;
+  justify-content: center;
+  display: flex;
 }
 
 .button {
@@ -286,7 +293,8 @@ header {
   font-weight: bold;
   font-size: larger;
   font-family: 'Noto Sans Arabic', sans-serif;
-  margin: auto;
+  margin: 0;
+  font-size: 16px;
 }
 
 .playbutton:hover {

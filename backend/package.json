@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
- "scripts": {
-  "dev": "nodemon server.js",
-  "start": "node server.js"
-},
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gdguj/GDG-WebDev.git"
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/gdguj/GDG-WebDev#readme",
   "dependencies": {
     "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "nanoid": "^5.1.6"
   },

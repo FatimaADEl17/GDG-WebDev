@@ -1,12 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const { nanoid } = require("nanoid");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 /* Mock Database */
 const sessions = new Map();
@@ -53,8 +54,20 @@ app.post("/word-grid/answer", (req, res) => {
   const session = sessions.get(sessionId);
   if (!session) return res.status(404).json({ error: "Session not found" });
 
+  if (session.status !== "active")
+    return res.status(400).json({ error: "Game is finished" });
+
+  if (!["green", "blue"].includes(team))
+    return res.status(400).json({ error: "Invalid team" });
+
+  if (session.nowPlaying !== team)
+    return res.status(400).json({ error: "Not your turn" });
+
   const cell = session.cells.find(c => c.id === cellId);
   if (!cell) return res.status(404).json({ error: "Cell not found" });
+
+  if (cell.claimedBy)
+    return res.status(400).json({ error: "Cell already claimed" });
 
   const correct = startsWithLetter(answer, cell.letter);
 
@@ -72,7 +85,8 @@ app.post("/word-grid/answer", (req, res) => {
   res.json({
     correct,
     nowPlaying: session.nowPlaying,
-    cell
+    cell,
+    teams: session.teams
   });
 });
 
@@ -84,6 +98,9 @@ app.patch("/word-grid/score", (req, res) => {
 
   const session = sessions.get(sessionId);
   if (!session) return res.status(404).json({ error: "Session not found" });
+
+  if (!["green", "blue"].includes(team))
+    return res.status(400).json({ error: "Invalid team" });
 
   session.teams[team].score += points;
 

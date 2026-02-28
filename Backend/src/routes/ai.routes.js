@@ -1,10 +1,8 @@
-// src/routes/ai.routes.js
 const express = require("express");
+const { getFamilyFeud } = require("../controllers/ai.controller");
+
 const router = express.Router();
 
-const { testAI } = require("../controllers/ai.controller");
-
-// GET /api/test
-router.get("/test", testAI);
+router.get("/family-feud", getFamilyFeud);
 
 module.exports = router;

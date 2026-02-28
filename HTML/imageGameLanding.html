@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Choose Difficulty</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Word Game</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="../CSS/LevelsPage.css" />
-  <script defer src="../JS/LevelsPage.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/imageGameLanding.css">
 </head>
 
 <body>
 
- <!-- ================= NAVBAR ================= -->
-    <nav class="bg-white shadow-sm">
+    <!-- ================= NAVBAR ================= -->
+  <nav class="bg-white shadow-sm ">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
             <!-- Logo -->
             <img src="../Images/colorful-logo.png" alt="logo" class="h-10">
 
             <!-- Links -->
-            <div class="hidden md:flex items-center gap-8 font-semibold text-gray-600">
+            <div class="flex items-center gap-8 font-semibold text-gray-600">
                 <a href="main page.html" class="hover:text-[#0078BF]">الرئيسية</a>
                 <a href="main page.html#about" class="hover:text-[#0078BF]">من نحن</a>
                 <a href="main page.html#goals" class="hover:text-[#0078BF]">أهدافنا</a>
@@ -38,40 +33,33 @@
         </div>
     </nav>
 
-  <main class="frame">
+  <div class="frame">
     <div class="panel">
-      <img src="../images/Top Strip.png" class="strip">
 
-      <h1 class="title">Choose Difficulty</h1>
+      <img src="../images/Corner-Left.png" class="corner corner-left" alt="">
+      <img src="../images/Corner-Right.png" class="corner corner-right" alt="">
 
-      <section class="cards">
-        <button class="difficulty-card easy" type="button" data-difficulty="easy">
-          <div class="card-top">Easy</div>
-          <div class="card-body">
-            <img class="icon" src="../images/EasyIcon.png" alt="">
-          </div>
-        </button>
+      <img src="../images/GDGIcon.png" class="gdg-icon" alt="">
+      <h1 class="title">Guess the Word <span style="color:#4285F4">G</span><span style="color:#EA4335">a</span><span style="color:#FBBC05">m</span><span style="color:#34A853">e</span></h1>
+      <p class="subtitle">Combine Images. Guess the Word!</p>
 
-        <button class="difficulty-card medium" type="button" data-difficulty="medium">
-          <div class="card-top">Medium</div>
-          <div class="card-body">
-            <img class="icon" src="../images/MediumIcon.png" alt="">
-          </div>
-        </button>
-
-        <button class="difficulty-card hard" type="button" data-difficulty="hard">
-          <div class="card-top">Hard</div>
-          <div class="card-body">
-            <img class="icon" src="../images/HardIcon.png" alt="">
-          </div>
-        </button>
-      </section>
-
-      <button class="start-btn" id="startBtn" disabled>Start Game</button>
+      <div class="images-row">
+        <img src="../images/guessImage.png" class="game-image">
+        <div class="symbol">+</div>
+        <img src="../images/guessImage.png" class="game-image">
+        <div class="symbol">=</div>
+        <div class="symbol">?</div>
     </div>
-  </main>
 
-      <!-- ================= FOOTER ================= -->
+    <div class="buttons-group">
+      <a href="ImageGameLevels.html"><button class="play-btn">Start the Game</button></a>
+      <a href="main page.html"><button class="home-link">Return Home</button></a>
+    </div>
+
+    </div>
+  </div>
+
+   <!-- ================= FOOTER ================= -->
     <footer class="bg-[#403F41] text-gray-300 py-12 px-6">
         <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 

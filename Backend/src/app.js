@@ -17,3 +17,7 @@ app.use("/api/ai", aiRoutes);
 app.use(errorMiddleware);
 
 module.exports = app;
+
+//word grid
+const wordGridRoutes = require("./routes/wordGrid.routes");
+app.use("/word-grid", wordGridRoutes);

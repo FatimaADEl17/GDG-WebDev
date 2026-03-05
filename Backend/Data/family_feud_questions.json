@@ -4,7 +4,7 @@
     "answers": [
       { "answer": "تم", "points": 95 },
       { "answer": "صباح الخير", "points": 88 },
-      { "answer": "أبشر", "points": 82 },
+      { "answer": "أبشر/ابشر", "points": 82 },
       { "answer": "منورين", "points": 75 },
       { "answer": "الله يحييكم", "points": 70 },
       { "answer": "متى الاجتماع؟", "points": 65 },
@@ -17,11 +17,11 @@
   {
     "question": "مهنة تتمنى لو كان عندك صديق يشتغل فيها عشان يخدمك؟",
     "answers": [
-      { "answer": "طبيب", "points": 94 },
+      { "answer": "طبيب/دكتور", "points": 94 },
       { "answer": "ميكانيكي", "points": 86 },
       { "answer": "محامي", "points": 80 },
       { "answer": "موظف بنك", "points": 75 },
-      { "answer": "تقني كمبيوتر", "points": 70 },
+      { "answer": "تقني كمبيوتر/مهندس حاسب", "points": 70 },
       { "answer": "مهندس ديكور", "points": 62 },
       { "answer": "خياط", "points": 55 },
       { "answer": "حلاق", "points": 40 },
@@ -39,9 +39,9 @@
       { "answer": "الجوال", "points": 72 },
       { "answer": "فردة شراب", "points": 65 },
       { "answer": "السماعات", "points": 58 },
-      { "answer": "الولاعة", "points": 45 },
+      { "answer": "خاتم", "points": 45 },
       { "answer": "المقص", "points": 35 },
-      { "answer": "خاتم", "points": 20 }
+      { "answer": "شبشب البيت", "points": 20 }
     ]
   },
   {
@@ -70,15 +70,15 @@
       { "answer": "دباب توصيل", "points": 65 },
       { "answer": "طفل يبكي", "points": 55 },
       { "answer": "زحمة مفاجئة", "points": 48 },
-      { "answer": "صوت غريب", "points": 35 },
-      { "answer": "جوال يرن", "points": 25 }
+      { "answer": "صوت غريب/الاصوات", "points": 35 },
+      { "answer": "جوال يرن/اتصال", "points": 25 }
     ]
   },
   {
     "question": "ريحة تحب تشمها مع إنها مو عطر؟",
     "answers": [
       { "answer": "بنزين", "points": 93 },
-      { "answer": "تراب المطر", "points": 90 },
+      { "answer": "تراب المطر/المطر", "points": 90 },
       { "answer": "قهوة", "points": 85 },
       { "answer": "بخور", "points": 80 },
       { "answer": "خبز", "points": 72 },
@@ -87,6 +87,66 @@
       { "answer": "عشب", "points": 40 },
       { "answer": "بوية", "points": 30 },
       { "answer": "عود كبريت", "points": 20 }
+    ]
+  },
+  {
+    "question": "أكثر حيوان يخاف منه الناس مع أنه صغير؟",
+    "answers": [
+      { "answer": "جرذ", "points": 90 },
+      { "answer": "قطة", "points": 87 },
+      { "answer": "كلب", "points": 80 },
+      { "answer": "خفاش", "points": 73 },
+      { "answer": "فار", "points": 65 },
+      { "answer": "قنفذ", "points": 50 },
+      { "answer": "ضفدع", "points": 45 },
+      { "answer": "سنجاب", "points": 37 },
+      { "answer": "ضب", "points": 35 },
+      { "answer": "حرباء", "points": 25 }
+    ]
+  },
+  {
+    "question": "أكثر سبب يخليك تسكر بوجه شخص (تقطع المكالمة)؟",
+    "answers": [
+      { "answer": "الشبكة قطعت/ضعف الشبكة", "points": 95 },
+      { "answer": "خلصت البطارية", "points": 90 },
+      { "answer": "اجتماع", "points": 87 },
+      { "answer": " انتظار/اتصال اخر", "points": 75 },
+      { "answer": "إزعاج", "points": 65 },
+      { "answer": "جاني النوم", "points": 50 },
+      { "answer": "أحد ناداني", "points": 45 },
+      { "answer": "قاعد أسوق/ساهر", "points": 38 },
+      { "answer": "ما فيه رصيد/انتهاء الرصيد", "points": 30 },
+      { "answer": "بالغلط", "points": 15 }
+    ]
+  },
+  {
+    "question": "أكثر شيء يغير نفسية الشخص بلحظة؟",
+    "answers": [
+      { "answer": "إيداع بنكي/فلوس", "points": 98 },
+      { "answer": "وجبة لذيذة/طعام/أكل", "points": 90 },
+      { "answer": "النوم", "points": 85 },
+      { "answer": "المطر", "points": 75 },
+      { "answer":  "تعدل الجو/الشتاء", "points": 68 },
+      { "answer": "فنجال قهوة", "points": 55 },
+      { "answer": "هدية مفاجئة/هدية", "points": 47 },
+      { "answer":"قراءة القران/الاذكار", "points": 40 },
+      { "answer":"خبر نجاح/خبر مفرح" , "points": 35 },
+      { "answer": "كلمة حلوة", "points": 20 }
+    ]
+  },
+  {
+    "question": "أصعب شيء تسويه وأنت مستعجل؟",
+    "answers": [
+      { "answer": "ربط الشوز/ربط الرباط", "points": 90 },
+      { "answer": "البحث عن المفتاح", "points": 82 },
+      { "answer": "كتابة رسالة", "points": 70 },
+      { "answer": "لبس الشماغ", "points": 65 },
+      { "answer": "تعديل الطرحة", "points": 65 },
+      { "answer": "لبس الاسوارة/لبس المجوهرات", "points": 58 },
+      { "answer": "إغلاق الباب/فتح الباب", "points": 50 },
+      { "answer": "شحن الجوال", "points": 46 },
+      { "answer": "الانتظار", "points": 37 },
+      { "answer": "التركيز", "points": 30 }
     ]
   }
 ]

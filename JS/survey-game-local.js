@@ -168,6 +168,17 @@ function normalize(str) {
     .trim();
 }
 
+function matches(userAnswer, correctAnswer) {
+  const user = normalize(userAnswer);
+
+  const rawOptions = correctAnswer.split("/");
+
+  const options = rawOptions.map(x => normalize(x));
+
+  return options.includes(user);
+}
+
+
 // -------------------------------
 // SUBMIT ANSWER (LOCAL LOGIC)
 // -------------------------------
@@ -186,7 +197,7 @@ function submitAnswer() {
 
   // ابحث عن إجابة مطابقة
   const found = gameState.answers.find(
-    a => normalize(a.answer) === normalized && !a.revealed
+    a => matches(userInput, a.answer) && !a.revealed
   );
 
   // ───────── وضع السرقة (محاولة واحدة فقط) ─────────
@@ -219,6 +230,7 @@ function submitAnswer() {
     const result = {
       correct: true,
       answer: found.answer,
+      userInput: userInput,
       roundScore: gameState.roundScore + found.points
     };
     handleCorrectAnswer(result);
@@ -246,8 +258,9 @@ function submitAnswer() {
 function handleCorrectAnswer(result) {
   gameState.roundScore = result.roundScore;
 
-  const revealedAns = gameState.answers.find(
-    a => normalize(a.answer) === normalize(result.answer) && !a.revealed
+    const revealedAns = gameState.answers.find(
+  a => matches(result.userInput, a.answer) && !a.revealed
+
   );
   if (revealedAns) revealedAns.revealed = true;
 

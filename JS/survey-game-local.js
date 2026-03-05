@@ -46,7 +46,7 @@ let questionsData = [];
 
 // تحميل الأسئلة من JSON
 async function loadQuestions() {
-  const res = await fetch("/Data/family_feud_questions.json");
+  const res = await fetch("../Backend/Data/family_feud_questions.json");
   questionsData = await res.json();
 }
 
@@ -89,8 +89,8 @@ async function startNewRound() {
   answersEl.innerHTML = "";
 
   // Timer reset
-  timeLeft = 45;
-  timerEl.textContent = timeLeft;
+  timeLeft = 180;
+  timerEl.textContent = formatTime(timeLeft);
 
   // Load random question
   const q = getRandomQuestion();
@@ -276,8 +276,8 @@ function handleWrongAnswer(result) {
     gameState.currentTeam = gameState.currentTeam === "team1" ? "team2" : "team1";
     gameState.wrongAttempts = 0;
 
-    timeLeft = 45;
-    timerEl.textContent = timeLeft;
+    timeLeft = 180;
+    timerEl.textContent = formatTime(timeLeft);
 
     showResultPopup("📢 تنبيه", "الآن دور الفريق الآخر لمحاولة السرقة!");
     updateUI();
@@ -302,7 +302,6 @@ function handleStealFailure(result) {
 }
 
 function handleRoundEnd(message, winnerTeamKey) {
-  roundCounter++;
 
   gameState.answers.forEach(a => a.revealed = true);
   updateUI();
@@ -316,6 +315,8 @@ function handleRoundEnd(message, winnerTeamKey) {
 
   inputEl.disabled = true;
   roundActive = false;
+
+  roundCounter++;
 
   if (roundCounter >= maxRounds) {
     setTimeout(() => {
@@ -360,14 +361,22 @@ function closeResultPopup() {
 // -------------------------------
 // TIMER
 // -------------------------------
-let timeLeft = 45;
+
+function formatTime(seconds){
+  const m=Math.floor(seconds/60);
+  const s=seconds%60;
+  return `${m}:${String(s).padStart(2,"0")}`;
+ }
+
+let timeLeft = 180;
 let roundActive = false;
+timerEl.textContent=formatTime(timeLeft);
 
 setInterval(() => {
   if (!roundActive) return;
 
   timeLeft--;
-  timerEl.textContent = timeLeft;
+  timerEl.textContent = formatTime(timeLeft);
 
   if (timeLeft <= 0) {
     roundActive = false;
@@ -378,11 +387,15 @@ setInterval(() => {
       gameState.currentTeam = gameState.currentTeam === "team1" ? "team2" : "team1";
       gameState.wrongAttempts = 0;
 
+      timeLeft=180;
+      timerEl.textContent=formatTime(timeLeft);
+
       showResultPopup("⏰ انتهى الوقت!", "الآن دور الفريق الآخر لمحاولة السرقة!");
 
       setTimeout(() => {
         closeResultPopup();
         updateUI();
+        roundActive=true;
       }, 1500);
     } else {
       handleStealFailure({
